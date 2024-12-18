@@ -1,0 +1,44 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe 生成活动文件",
+            "command": "D:\\Programs\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-I",
+                "${workspaceFolder}",
+                "-I",
+                "D:\\Programs\\packages_cpp\\eigen\\eigen-3.4.0",
+                "-I",
+                "C:\\Users\\zzy28\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\_core\\include",
+                "-I",
+                "C:\\Users\\zzy28\\AppData\\Local\\Programs\\Python\\Python313\\include",
+                "-I",
+                "D:\\Programs\\packages_cpp\\matplotlib-cpp\\matplotlib-cpp-master",
+                "-L",
+                "C:\\Users\\zzy28\\AppData\\Local\\Programs\\Python\\Python313",
+                "-L",
+                "C:\\Users\\zzy28\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages",
+                "-l",
+                "python313",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        }
+    ],
+    "version": "2.0.0"
+}

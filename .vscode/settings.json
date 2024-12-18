@@ -1,0 +1,20 @@
+{
+    "cSpell.words": [
+        "dcomplex",
+        "dndn",
+        "eigen",
+        "eigh",
+        "LITOOLS",
+        "pbpb",
+        "ptpb",
+        "ptpt",
+        "subvec",
+        "xlabel",
+        "xyxy",
+        "xzxz",
+        "xzyz",
+        "ylabel",
+        "yzyz"
+    ],
+    "C_Cpp.errorSquiggles": "enabled"
+}

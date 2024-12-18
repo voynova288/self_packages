@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}",
+                "D:/Programs/packages_cpp/matplotlib-cpp/matplotlib-cpp-master",
+                "D:\\Programs\\packages_cpp\\eigen\\eigen-3.4.0",
+                "C:\\Users\\zzy28\\AppData\\Local\\Programs\\Python\\Python313\\include",
+                "C:\\Users\\zzy28\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\_core\\include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "D:\\Programs\\MinGW\\bin\\g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "windows-gcc-x64",
+            "compilerPathInCppPropertiesJson": "D:\\Programs\\MinGW\\bin\\gcc.exe",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "D:/Programs/packages_cpp/matplotlib-cpp/matplotlib-cpp-master",
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}
