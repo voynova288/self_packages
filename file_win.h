@@ -5,10 +5,12 @@
 #include <iostream>
 #include <string>
 #include <type_traits>
-#define WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN //*只用Windows中简单的API功能
 #include <windows.h>
 #undef WIN32_LEAN_AND_MEAN
 
+//*将窄字符串转化成宽字符串
+//*其中窄字符串是ASCII或UTF-8字符等，宽字符串包含中文或者各种语言
 std::wstring to_wstring(const std::string &str);
 
 template <typename FILEPATH_T = std::filesystem::path,
@@ -19,6 +21,7 @@ template <typename FILEPATH_T = std::filesystem::path,
 class MemoryMapper {
   //*适用于indows的内存映射类
   //*std::string仅支持英文和一部分符号，std::filesystem::path和std::wstring支持中文和更多符号
+  //*以二进制数据映射，文件中显示乱码是正常的
 private:
   std::filesystem::path filepath;
   size_t filesize;
@@ -30,13 +33,18 @@ private:
 
 public:
   MemoryMapper(const FILEPATH_T &filepath_, size_t filesize_,
-               bool create_if_not_exists_ = 0);
+               bool create_if_not_exists_ = false);
+  //*构造函数，创建内存映射对象
+  //*参数：文件路径和映射内存的大小，以及如果不存在文件是否创建文件
   ~MemoryMapper();
+  //*析构函数，解除内存映射
 
   bool map_memory();
   void unmap_memory();
 
   template <typename DATA_T> DATA_T *get_mapped_memory();
+  //*返回指向映射内存的指针
+  //*DATA_T为需要映射的数据类型
 };
 
 MemoryMapper(const std::filesystem::path &,
