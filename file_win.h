@@ -5,7 +5,9 @@
 #include <iostream>
 #include <string>
 #include <type_traits>
+#define WIN32_LEAN_AND_MEAN
 #include <windows.h>
+#undef WIN32_LEAN_AND_MEAN
 
 std::wstring to_wstring(const std::string &str);
 
