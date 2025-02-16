@@ -9,6 +9,25 @@
 using namespace Eigen;
 using namespace std::complex_literals;
 
+//*下面这些eig主要用于特征值和特征向量的储存和排序
+
+/* 
+*排序用法演示：
+* Eigen::MatrixXd mat;
+
+* 与h相关的代码
+
+* eig example;
+* EigenSolver solver(mat);
+* eig.value = solver.eigenvalues();
+* eig.vec = solver.eigenvectors();
+* sort_eig(example); 
+*/
+
+//*于是就完成了对mat本征值和本征向量的排序，默认升序
+
+
+
 //*复矩阵的特征值和特征向量
 struct eig {
   Eigen::VectorXcd value;
